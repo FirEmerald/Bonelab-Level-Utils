@@ -4,6 +4,7 @@ Utilities for bonelab levels. Player health options and waypoints!<br/>
 <br/>
 Level Utils loads customized level properties from "\<Game directory\>\\UserData\\LevelUtils\\\<level pallet\>\\\<level barcode\>.json".<br/>
 Options can be set using the in-game BoneMenu as well.<br/>
+Comes with JSON for [LabWorks](https://mod.io/g/bonelab/m/boneworks) that disables level reloading on death for the currently released levels (01 through 08). No more having to replay the entire level after dying!<br/>
 <br/>
 <br/>
 # Setting up custom level properties
