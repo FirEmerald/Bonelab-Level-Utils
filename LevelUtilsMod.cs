@@ -28,7 +28,7 @@ namespace ExtraLevelMeta
 
         public override void OnInitializeMelon()
         {
-            menu = MenuManager.CreateCategory("Level Meta", Color.white);
+            menu = MenuManager.CreateCategory("Level Utils", Color.white);
             reloadOnDeath = menu.CreateBoolElement("Reload on Death", Color.white, true, v => {
                 Player.rigManager.GetComponent<Player_Health>().reloadLevelOnDeath = v;
                 levelMeta.reloadOnDeath = v;
