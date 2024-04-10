@@ -12,7 +12,7 @@ namespace ExtraLevelMeta
 {
     public class LevelUtilsMod : MelonMod
     {
-        internal static readonly string META_FOLDER = MelonUtils.UserDataDirectory + "\\LevelUtils";
+        internal static readonly string META_FOLDER = Path.Combine(MelonUtils.UserDataDirectory + "LevelUtils");
         internal static readonly JsonSerializerSettings JSON_SETTINGS = new JsonSerializerSettings() { Formatting = Formatting.Indented };
         public static LevelUtilsMod instance;
         public static string metaFile;
@@ -100,7 +100,7 @@ namespace ExtraLevelMeta
 
         internal static void LevelInitialized(LevelInfo info)
         {
-            metaFile = META_FOLDER + "\\" + info.levelReference.Crate.Pallet.Title + "\\" + info.barcode + ".json";
+            metaFile = Path.Combine(META_FOLDER, info.levelReference.Crate.Pallet.Title, info.barcode + ".json");
             loadMeta();
         }
 
