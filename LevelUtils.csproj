@@ -28,6 +28,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AvatarStatsLoader.csproj.user" />
+    <Content Include="LevelUtils.csproj.user" />
   </ItemGroup>
 </Project>
