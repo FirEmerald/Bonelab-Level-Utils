@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 using UnityEngine;
 
 namespace ExtraLevelMeta
@@ -7,8 +7,11 @@ namespace ExtraLevelMeta
     {
         [JsonIgnore]
         public Vector3 position;
+        [JsonInclude]
         public float x { get => position.x; set => position.x = value; }
+        [JsonInclude]
         public float y { get => position.y; set => position.y = value; }
+        [JsonInclude]
         public float z { get => position.z; set => position.z = value; }
 
         public WaypointPosition()

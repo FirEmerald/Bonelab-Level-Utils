@@ -1,12 +1,16 @@
 ﻿using System.Collections.Generic;
-using static Health;
+using System.Text.Json.Serialization;
+using static Il2CppSLZ.Marrow.Health;
 
 namespace ExtraLevelMeta
 {
     public class LevelUtilsInfo
     {
+        [JsonInclude]
         public bool reloadOnDeath;
+        [JsonInclude]
         public HealthMode mortality = HealthMode.Mortal;
-        public List<Waypoint> waypoints = new List<Waypoint>();
+        [JsonInclude]
+        public List<Waypoint> waypoints = new();
     }
 }

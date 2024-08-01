@@ -13,3 +13,20 @@ Open up Menu->Preferences/Options->BoneMenu->Level Utils<br/>
 Set the values as you prefer.<br/>
 For waypoints, physically position yourself at the desired location, go to Waypoints->New Waypoint, and then select a color.<br/>
 Once created, a waypoint's name, color, and position can be modified inside the level's JSON file (see above for location).<br/>
+
+## Compilation
+
+To compile this mod, create a file named `LevelUtils.csproj.user` in the
+project. Copy this text into the file, replacing the path in `BONELAB_PATH` with
+the path to your BONELAB installation.
+```
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+    <PropertyGroup>
+        <BONELAB_PATH>C:\Program Files (x86)\Steam\steamapps\common\BONELAB</BONELAB_PATH>
+    </PropertyGroup>
+</Project>
+```
+<br/>
+<br/>
+

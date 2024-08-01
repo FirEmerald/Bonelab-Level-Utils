@@ -1,14 +1,17 @@
 ﻿using BoneLib.BoneMenu.Elements;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 using UnityEngine;
 
 namespace ExtraLevelMeta
 {
     public class Waypoint
     {
+        [JsonInclude]
         public string name;
 
+        [JsonInclude]
         public WaypointColor color;
+        [JsonInclude]
         public WaypointPosition position;
         [JsonIgnore]
         public SubPanelElement panel;
