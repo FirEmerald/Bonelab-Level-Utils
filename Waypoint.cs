@@ -1,4 +1,4 @@
-﻿using BoneLib.BoneMenu.Elements;
+﻿using BoneLib.BoneMenu;
 using System.Text.Json.Serialization;
 using UnityEngine;
 
@@ -14,7 +14,7 @@ namespace ExtraLevelMeta
         [JsonInclude]
         public WaypointPosition position;
         [JsonIgnore]
-        public SubPanelElement panel;
+        public Element[] elements = new Element[3];
 
         public Waypoint()
         {
