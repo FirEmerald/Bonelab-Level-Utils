@@ -33,7 +33,8 @@ namespace ExtraLevelMeta
 
         public override void OnInitializeMelon()
         {
-            menu = Menu.CreatePage("Level Utils", Color.white);
+
+            menu = Page.Root.CreatePage("Level Utils", Color.white);
             reloadOnDeath = menu.CreateBool("Reload on Death", Color.white, true, v => {
                 Player.RigManager.GetComponent<Player_Health>().reloadLevelOnDeath = v;
                 levelMeta.reloadOnDeath = v;
@@ -44,9 +45,9 @@ namespace ExtraLevelMeta
                 levelMeta.mortality = (HealthMode) cur;
                 SaveMeta();
             });
-            waypointsMenu = menu.CreatePage("Waypoints", Color.white, maxElements: 9); //TODO cannot upload new version until either https://github.com/yowchap/BoneLib/issues/70 or https://github.com/yowchap/BoneLib/issues/71 are resolved
+            waypointsMenu = menu.CreatePage("Waypoints", Color.white);
             // hack that lets us set the name field when the page is opened
-            newWaypointMenu = waypointsMenu.CreatePage("New Waypoint", Color.white, maxElements: 9, createLink: false);
+            newWaypointMenu = waypointsMenu.CreatePage("New Waypoint", Color.white, createLink: false);
             PageLinkElement link = new(newWaypointMenu.Name, newWaypointMenu.Color, () => {
                 string name = "New Waypoint";
                 HashSet<string> names = new(levelMeta.waypoints.Count);
